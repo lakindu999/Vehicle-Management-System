@@ -14,6 +14,8 @@ public class VehicleDTO {
     private long vehicleID;
     private String vehicleName;
     private String vehicleBrand;
+    private String fuelType;
+    private String transmissionType;
     private String vehicleType;
     private int numberOfSeats;
 }

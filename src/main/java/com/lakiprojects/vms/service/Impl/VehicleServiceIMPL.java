@@ -37,7 +37,7 @@ public class VehicleServiceIMPL implements VehicleService {
             vehicleRepo.deleteById(vehicleId);
         }
         else {
-            throw new RuntimeException("Deleted Successfully");
+            throw new RuntimeException("Vehicle Not Found");
         }
     }
 

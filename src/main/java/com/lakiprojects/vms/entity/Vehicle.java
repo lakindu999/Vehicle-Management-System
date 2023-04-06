@@ -25,10 +25,19 @@ public class Vehicle {
     @Column(name = "Vehicle_Brand",length = 100,nullable = false)
     private String vehicleBrand;
 
+    @Column(name = "Fuel_Type",length = 100,nullable = false)
+    private String fuelType;
+
+    @Column(name = "Transmission_Type",length = 100,nullable = false)
+    private String transmissionType;
+
     @Column(name = "Vehicle_Type",length = 100,nullable = false)
     private String vehicleType;
 
     @Column(name = "Number_of_seats",length = 100,nullable = false)
     private int numberOfSeats;
+
+    @Column(name = "active_status", columnDefinition = "TINYINT default 1")
+    private boolean activeStatus;
 
 }
