@@ -10,6 +10,7 @@ import org.hibernate.annotations.TypeDefs;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Set;
 
 @Entity
 @AllArgsConstructor
@@ -39,4 +40,8 @@ public class Customer {
 
     @Column(name = "active_status", columnDefinition = "TINYINT default 1")
     private boolean activeStatus;
+
+    @OneToMany(mappedBy = "customer")
+    private Set<Bill> bill;
+
 }

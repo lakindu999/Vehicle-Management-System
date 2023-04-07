@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @AllArgsConstructor
@@ -39,5 +40,8 @@ public class Vehicle {
 
     @Column(name = "active_status", columnDefinition = "TINYINT default 1")
     private boolean activeStatus;
+
+    @OneToMany(mappedBy = "vehicle")
+    private Set<BillDetail> billDetails;
 
 }
